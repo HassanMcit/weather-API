@@ -86,7 +86,7 @@ function display(isTrue) {
     } else {
         box = `<div class="col-12 h-100 position-relative d-flex flex-column justify-content-center align-items-center h-75 top-0 start-0 end-0 bottom-0 bg-dark p-3 ">
                     <img src="image/404.png" class="w-50 mx-auto pb-3">
-                    <h1 class="text-white fs-1 mt-5">oops incorrect location ! <img src="image/Face-bad.svg.png" alt="bad-face" width="60"/></h1>
+                    <h1 class="text-white fs-1 mt-5">oops incorrect location ! <img src="image/Face-bad.png" alt="bad-face" width="60"/></h1>
                 </div>`;
     }
     row.innerHTML = box;

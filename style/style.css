@@ -1,0 +1,100 @@
+:root {
+    --bs-border-radius: 0rem;
+}
+
+h1 {
+    font-size: 6.4285714286rem;
+}
+
+.xxx {
+    font-size: 0.6rem;
+    padding-left: 4px;
+}
+
+.yyy {
+    padding-top: 13px;
+}
+
+.xx-1 .card {
+    background-color: #262936;
+}
+
+.xx-1 .card .card-body div:first-child {
+    background-color: #222530;
+}
+
+.xx-2 .card .card-body div:first-child {
+    background-color: #2A2D37;
+}
+
+.xx-2 .card, .dark-light {
+    background-color: #323544 !important;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.second-section {
+    background-image: url("../image/banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show,
+.nav-link:focus, 
+.nav-link:hover  {
+    box-sizing: border-box !important;
+    border-color: #12A0BE !important;
+    color: #12A0BE !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.btn-primary {
+    --bs-btn-color: #12A0BE;
+    --bs-btn-bg: #1e202b;
+    --bs-btn-border-color: #1e202b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #12A0BE;
+    --bs-btn-hover-border-color: #12A0BE;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #12A0BE;
+    --bs-btn-active-border-color: #12A0BE;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #12A0BE;
+    --bs-btn-disabled-border-color: #12A0BE;
+}
+
+.form-control::placeholder {
+            color: gray;
+}
+
+p.card-text.px-2.country {
+    font-size: 0.9rem;
+}
+
+.div-1 {
+    opacity: 0.4;
+}
+
+footer {
+    background-color: #262936;
+}
+
+.copy {
+    font-size: 14px;;
+}
+
+@media all and (max-width: 1000px) {
+    ul.navbar-nav.ms-auto.mb-2.mb-lg-0 {
+        width: auto !important;
+        margin-top: 10px;
+        background-color: #FFF;
+    }
+}

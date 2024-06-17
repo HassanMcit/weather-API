@@ -1,6 +1,6 @@
 const city = document.getElementById("city");
 const row = document.getElementById("row");
-let today = new Date();
+let today;
 let data;
 let link = document.querySelectorAll(".nav-link");
 
@@ -31,6 +31,7 @@ async function getTemp(a) {
 
 function display(isTrue) {
     let box = "";
+    today = new Date();
     if (isTrue) {
         let day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         let month = ["January", "February", "March", "April", "May", "June", "July", "August",

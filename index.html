@@ -27,26 +27,26 @@
           <p class="my-0 xxx">tagline goes here</p>
         </div>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto  py-2 mb-2 w-75 d-flex justify-content-end align-items-center mb-lg-0">
+        <ul class="navbar-nav ms-auto  py-2 mb-2 w-75 d-flex justify-content-end align-items-start align-items-md-center mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link border border-2 rounded-5 py-1 px-4 mx-2 active" aria-current="page" href="#">Home</a>
+            <a class="nav-link border border-2 rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link border-2 border border-dark rounded-5  py-1  px-4 mx-2 text-white" href="#">news</a>
+            <a class="nav-link border-2 border border-dark rounded-5  py-1 my-1 my-md-0  px-md-4 px-2 mx-2 text-white" href="#">news</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link border-2 border border-dark rounded-5 py-1 px-4 mx-2 text-white" href="#">Live Camera</a>
+            <a class="nav-link border-2 border border-dark rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 text-white" href="#">Live Camera</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link border-2 border border-dark rounded-5 py-1 px-4 mx-2 text-white" href="#">Photos</a>
+            <a class="nav-link border-2 border border-dark rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 text-white" href="#">Photos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link border-2 border border-dark rounded-5 py-1 px-4 mx-2 text-white" href="#">Contact</a>
+            <a class="nav-link border-2 border border-dark rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 text-white" href="#">Contact</a>
           </li>
         </ul>
       </div>
@@ -61,7 +61,12 @@
             placeholder="Enter Location Here" />
           <button class="btn btn-primary p-0 py-2 px-5 rounded-5" style="background-color: #12A0BE; color: #FFF;">Find</button>
         </div>
-        <div class="row mt-5 gy-4 mx-auto gx-md-0" id="row"></div>
+        <div class="row mt-5 gy-4 mx-auto gx-md-0" id="row">
+          <div class="w-100 h-100 bg-dark d-flex flex-column justify-content-center align-items-center p-5">
+            <span class="loader mx-auto"></span>
+            <h3 class="text-center mt-4 text-white d-flex align-items-center">Getting Location<div class="loader1 mt-1 ms-1"></div></h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -69,12 +74,12 @@
   <footer class="py-5">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-8 d-flex bg-dark p-1 align-items-center rounded-5">
+        <div class="col-12 col-md-8 d-flex bg-dark p-1 mb-md-0 mb-4 justify-content-center align-items-center rounded-5">
           <input type="text" class="form-control  rounded-5  text-bg-dark border-0"
             placeholder="Enter Your Email to Subscribe..." />
           <button class="btn btn-primary p-0 py-2 px-3 rounded-5" style="background-color: #12A0BE; color: #FFF;">Subscribe</button>
         </div>
-        <div class="col-12 col-md-2 d-flex justify-content-between mx-auto my-auto">
+        <div class="col-12 col-md-2 d-flex justify-content-center justify-content-md-between mx-auto my-auto">
           <button type="button" class="btn btn-primary p-2 d-flex align-items-center rounded-circle">
             <i class="fa-brands fa-facebook-f p-1" style="font-size: 20px;"></i>
           </button>

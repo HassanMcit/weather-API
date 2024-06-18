@@ -1,3 +1,5 @@
+'use strict'
+
 const city = document.getElementById("city");
 const row = document.getElementById("row");
 let today;

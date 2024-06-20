@@ -13,7 +13,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="style/all.min.css">
   <link rel="stylesheet" href="style/bootstrap.min.css">
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/style.min.css">
 </head>
 
 <body class="bg-dark">
@@ -27,44 +27,116 @@
           <p class="my-0 xxx">tagline goes here</p>
         </div>
       </a>
-      <button class="navbar-toggler rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler rounded-3" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto  py-2 mb-2 w-75 d-flex justify-content-end align-items-start align-items-md-center mb-lg-0">
+        <ul
+          class="navbar-nav ms-auto  py-2 mb-2 w-75 d-flex justify-content-end align-items-start align-items-md-center mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link border border-2 rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 active" aria-current="page" href="#">Home</a>
+            <a class="nav-link border border-2 rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 active" aria-current="page"
+              href="#" id="home1">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link border-2 border border-dark rounded-5  py-1 my-1 my-md-0  px-md-4 px-2 mx-2 text-white" href="#">news</a>
+            <a class="nav-link border-2 border border-dark rounded-5  py-1 my-1 my-md-0  px-md-4 px-2 mx-2 text-white"
+              href="#">news</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link border-2 border border-dark rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 text-white" href="#">Live Camera</a>
+            <a class="nav-link border-2 border border-dark rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 text-white"
+              href="#">Live Camera</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link border-2 border border-dark rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 text-white" href="#">Photos</a>
+            <a class="nav-link border-2 border border-dark rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 text-white"
+              href="#">Photos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link border-2 border border-dark rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 text-white" href="#">Contact</a>
+            <a class="nav-link border-2 border border-dark rounded-5 py-1 my-1 my-md-0 px-md-4 px-2 mx-2 text-white"
+              href="#" id="contact1">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="second-section pt-5 mb-5 ">
+  <div class="second-section pt-5 mb-5 d-block" id="home">
     <div class="container pt-5">
       <div class="row mx-auto gx-md-0">
         <div class="col-12 d-flex bg-dark p-1 align-items-center rounded-5">
           <input id="city" type="text" class="form-control  rounded-5  text-bg-dark border-0"
             placeholder="Enter Location Here" />
-          <button class="btn btn-primary p-0 py-2 px-5 rounded-5" style="background-color: #12A0BE; color: #FFF;">Find</button>
+          <button class="btn btn-primary p-0 py-2 px-5 rounded-5"
+            style="background-color: #12A0BE; color: #FFF;">Find</button>
         </div>
         <div class="row mt-5 gy-4 mx-auto gx-md-0" id="row">
           <div class="w-100 h-100 bg-dark d-flex flex-column justify-content-center align-items-center p-5">
             <span class="loader mx-auto"></span>
-            <h3 class="text-center mt-4 text-white d-flex align-items-center">Getting Location<div class="loader1 mt-1 ms-1"></div></h3>
+            <h3 class="text-center mt-4 text-white d-flex align-items-center">Getting Location<div
+                class="loader1 mt-1 ms-1"></div>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bg-dark d-none" id="contact">
+    <nav class=" bg-opacity-25 dark-light  rounded-5"
+      style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+      aria-label="breadcrumb">
+      <ol class="breadcrumb p-3">
+        <li class="breadcrumb-item"><a href="#" class="text-white text-decoration-none">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ol>
+    </nav>
+    <div class="mt-5 text-white">
+      <div class="row justify-content-between mb-5 gy-5">
+        <div class="col-12 col-md-5">
+          <div class="inner-1 dark-light p-3 rounded-3">
+            <img src="image/map.png" alt="map" class="w-100 rounded-4">
+            <div class="text pt-3 d-flex gap-3 flex-wrap justify-content-between align-items-center">
+              <div class="copy text-white-50">
+                <i class="fa-solid fa-location-dot cloud pe-2"></i>
+                Company Name INC.2803 Avenue Street, Los Angeles
+              </div>
+              <div class="copy text-white-50">
+                <i class="fa-solid fa-phone cloud pe-2"></i>
+                +1 800 314 235
+              </div>
+              <div class="copy text-white-50">
+                <i class="fa-solid fa-envelope cloud pe-2"></i>
+                contact@companyname.com
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="inner">
+            <h2>Contact Us</h2>
+            <p class="copy text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur
+              inventore ducimus, facilis, numquam id soluta omnis eius recusandae nesciunt vero repellat harum cum. Nisi
+              facilis odit hic, ipsum sed!</p>
+            <form class="row g-3">
+              <div class="col-md-6">
+                <input type="email" class="form-control rounded-5 text-bg-dark border-dark-subtle py-2 " id="inputEmail4" placeholder="Your Name...">
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control rounded-5 text-bg-dark border-dark-subtle py-2" id="inputPassword4" placeholder="Email Address...">
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control rounded-5 text-bg-dark border-dark-subtle py-2" id="inputCompany4" placeholder="Company Name...">
+              </div>
+              <div class="col-md-6">
+                <input type="url" class="form-control rounded-5 text-bg-dark border-dark-subtle py-2" id="inputPassword4" placeholder="Website...">
+              </div>
+              <div class="col-md-12">
+                <textarea name="txt" id="textarea" rows="4" cols="60" class="form-control rounded-5 text-bg-dark border-dark-subtle py-2 px-4" placeholder="Message..."></textarea>
+              </div>
+              <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary rounded-4" style="background-color: #12A0BE; color: #FFF;">Submit</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -74,10 +146,12 @@
   <footer class="py-5">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-8 d-flex bg-dark p-1 mb-md-0 mb-4 justify-content-center align-items-center rounded-5">
+        <div
+          class="col-12 col-md-8 d-flex bg-dark p-1 mb-md-0 mb-4 justify-content-center align-items-center rounded-5">
           <input type="text" class="form-control  rounded-5  text-bg-dark border-0"
             placeholder="Enter Your Email to Subscribe..." />
-          <button class="btn btn-primary p-0 py-2 px-3 rounded-5" style="background-color: #12A0BE; color: #FFF;">Subscribe</button>
+          <button class="btn btn-primary p-0 py-2 px-3 rounded-5"
+            style="background-color: #12A0BE; color: #FFF;">Subscribe</button>
         </div>
         <div class="col-12 col-md-2 d-flex justify-content-center justify-content-md-between mx-auto my-auto">
           <button type="button" class="btn btn-primary p-2 d-flex align-items-center rounded-circle">

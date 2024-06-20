@@ -6,6 +6,10 @@ h1 {
     font-size: 6.4285714286rem;
 }
 
+.cloud {
+    color: #12A0BE;
+}
+
 .xxx {
     font-size: 0.6rem;
     padding-left: 4px;
@@ -183,6 +187,11 @@ body {
     color: gray;
 }
 
+.form-control.rounded-5:focus
+,.form-control.rounded-5:hover {
+    border-color: #12A0BE !important;
+}
+
 p.card-text.px-2.country {
     font-size: 0.9rem;
 }
@@ -197,7 +206,10 @@ footer {
 
 .copy {
     font-size: 14px;
-    ;
+}
+
+.breadcrumb-item.active {
+    color: rgb(255 255 255 / 75%);
 }
 
 @media all and (max-width: 1000px) {

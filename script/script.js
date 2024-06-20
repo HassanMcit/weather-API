@@ -5,6 +5,11 @@ const row = document.getElementById("row");
 let today;
 let data;
 let link = document.querySelectorAll(".nav-link");
+let home = document.getElementById("home");
+let contact = document.getElementById("contact");
+let contactBtn = document.getElementById("contact1");
+let homeBtn = document.getElementById("home1");
+
 
 for (let i of link) {
     i.addEventListener('mouseenter', function (e) {
@@ -46,14 +51,14 @@ function display(isTrue) {
                             <p class="card-title ps-2 my-2 opacity-50 fw-normal">${day[today.getDay()]}</p>
                             <p class="card-title pe-2 my-2 opacity-50 fw-normal">${today.getDate()}${month[today.getMonth()]}</p>
                         </div>
-                        <p class="card-text px-2 mb-0 fs-1">${data.location.name}</p>
-                        <p class="card-text px-2 country">${data.location.country}</p>
+                        <p class="card-text  text-center px-2 mb-0 fs-1">${data.location.name}</p>
+                        <p class="card-text  text-center px-2 country">${data.location.country}</p>
                         <div class="d-flex justify-content-between align-content-center">
-                            <h1 class="ps-2">${data.current.temp_c}&#176C</h1>
+                            <h1 class="ps-2 text-center">${data.current.temp_c}&#176C</h1>
                         </div>
-                        <img src="https://${data.current.condition.icon}" alt="" width="90">
-                            <p class="text-primary text-opacity-75 ps-2 fs-4">${data.current.condition.text}</p>
-                            <div class="ps-2">
+                        <img class="mx-auto d-block" src="https://${data.current.condition.icon}" alt="" width="90">
+                            <p class="text-primary text-opacity-75 ps-2 fs-4 text-center">${data.current.condition.text}</p>
+                            <div class="ps-2 text-center">
                                 <span class="opacity-50 me-2"><i class="fa-solid fa-umbrella me-2"></i>${data.current.humidity}%</span>
                                 <span class="opacity-50 me-2"><i class="fa-solid fa-wind me-2"></i>${Math.round((data.current.wind_mph) * 1.60934)}km/h</span>
                                 <span class="opacity-50 me-2"><i class="fa-solid fa-compass me-2"></i>East</span>
@@ -89,7 +94,7 @@ function display(isTrue) {
     } else {
         box = `<div class="col-12 h-100 position-relative d-flex flex-column justify-content-center align-items-center h-75 top-0 start-0 end-0 bottom-0 bg-dark p-3 ">
                     <img src="image/404.png" class="w-50 mx-auto pb-3">
-                    <h1 class="text-white fs-1 mt-5">oops incorrect location ! <img src="image/Face-bad.png" alt="bad-face" width="60"/></h1>
+                    <h1 class="text-white text-center fs-1 mt-5">oops incorrect location ! <img src="image/Face-bad.png" alt="bad-face" width="60"/></h1>
                 </div>`;
     }
     row.innerHTML = box;
@@ -110,5 +115,23 @@ async function getYourCityName(lat, lon) {
     const data = await response.json();
     getTemp(data.address.city);
 }
+
+homeBtn.addEventListener('click', function(e) {
+    home.classList.replace("d-none", "d-block");
+    contact.classList.replace("d-block", "d-none");
+    homeBtn.classList.add("active");
+    contactBtn.classList.remove("active");
+    homeBtn.style.color = "#FFF";
+
+});
+
+contactBtn.addEventListener('click', function(e) {
+    contact.classList.replace("d-none", "d-block");
+    home.classList.replace("d-block", "d-none");
+    homeBtn.classList.remove("active");
+    contactBtn.classList.add("active");
+    homeBtn.style.color = "#FFF";
+    homeBtn.classList.add("border-dark");
+});
 
 getLocation();

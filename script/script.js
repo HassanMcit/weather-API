@@ -134,4 +134,8 @@ contactBtn.addEventListener('click', function(e) {
     homeBtn.classList.add("border-dark");
 });
 
+document.getElementById("submit").addEventListener('click', function(e) {
+    e.preventDefault();
+});
+
 getLocation();

@@ -53,8 +53,8 @@ function display(isTrue) {
                         </div>
                         <p class="card-text  text-center px-2 mb-0 fs-1">${data.location.name}</p>
                         <p class="card-text  text-center px-2 country">${data.location.country}</p>
-                        <div class="d-flex justify-content-between align-content-center">
-                            <h1 class="ps-2 text-center">${data.current.temp_c}&#176C</h1>
+                        <div class="d-flex justify-content-center align-content-center">
+                            <h1 class="px-2 text-center">${data.current.temp_c}&#176C</h1>
                         </div>
                         <img class="mx-auto d-block" src="https://${data.current.condition.icon}" alt="" width="90">
                             <p class="text-primary text-opacity-75 ps-2 fs-4 text-center">${data.current.condition.text}</p>

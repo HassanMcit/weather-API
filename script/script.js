@@ -31,7 +31,7 @@ async function getTemp(a) {
         data = await respone.json();
         display(true);
     }
-    catch(err) {
+    catch (err) {
         display(false)
     }
 }
@@ -107,16 +107,39 @@ function getLocation() {
 }
 
 function showPosition(position) {
+    console.log(position);
     getYourCityName(position.coords.latitude, position.coords.longitude);
 }
 
 async function getYourCityName(lat, lon) {
     const response = await fetch(`https://geocode.maps.co/reverse?lat=${lat}&lon=${lon}&api_key=6670203fc70ea496613783bfg67ef0c`);
     const data = await response.json();
+    console.log(data);
+    let location = `
+            <iframe width="100%" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+              src="https://maps.google.com/maps?q=${lat},${lon}&hl=es&z=14&amp;output=embed">
+            </iframe>
+            <br />
+            
+            <div class="text pt-3 d-flex gap-3 flex-wrap justify-content-between align-items-center">
+              <div class="copy text-white-50">
+                <i class="fa-solid fa-location-dot cloud pe-2"></i>
+                Company Name INC.2803 Avenue Street, Los Angeles
+              </div>
+              <div class="copy text-white-50">
+                <i class="fa-solid fa-phone cloud pe-2"></i>
+                +1 800 314 235
+              </div>
+              <div class="copy text-white-50">
+                <i class="fa-solid fa-envelope cloud pe-2"></i>
+                contact@companyname.com
+              </div>
+            </div>`;
+            document.getElementById("location").innerHTML = location
     getTemp(data.address.city);
 }
 
-homeBtn.addEventListener('click', function(e) {
+homeBtn.addEventListener('click', function (e) {
     home.classList.replace("d-none", "d-block");
     contact.classList.replace("d-block", "d-none");
     homeBtn.classList.add("active");
@@ -125,7 +148,7 @@ homeBtn.addEventListener('click', function(e) {
 
 });
 
-contactBtn.addEventListener('click', function(e) {
+contactBtn.addEventListener('click', function (e) {
     contact.classList.replace("d-none", "d-block");
     home.classList.replace("d-block", "d-none");
     homeBtn.classList.remove("active");
@@ -134,7 +157,7 @@ contactBtn.addEventListener('click', function(e) {
     homeBtn.classList.add("border-dark");
 });
 
-document.getElementById("submit").addEventListener('click', function(e) {
+document.getElementById("submit").addEventListener('click', function (e) {
     e.preventDefault();
 });
 
